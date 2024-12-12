@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en-US"> 
+    <head> 
+        <title>Notification Services</title>
+
+        <meta name="author" content="Graphicfort">
+        <meta name="robots" content="index follow">
+        <meta name="googlebot" content="index follow">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="keywords" content="PLUME, HTML5, CSS3, Creative, Multipurpose, Template, Create a website fast">
+        <meta name="description" content="HTML5 Multipurpose Template, Create a website fast"> 
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="assets/images/favicon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/iconmain.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/iconmain.png">
+ 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CPoppins:400,500,600" rel="stylesheet">
+ 
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="assets/css/plugins.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/9ef9f8834c4111f7.ltr.css">
+        <link rel="stylesheet" href="assets/css/responsive.css"> 
+        <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"> 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- <script src="assets/js/modernizr-custom.js"></script> -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       
+
+        <style type="text/css">
+            .swiper {
+          width: 100%;
+          height: 700px;
+        }
+        .disabled_swiper_button {
+            opacity: 0;
+            cursor: auto;
+            pointer-events: none;
+        }
+            #news-slider {
+              margin-top: 80px;
+            }
+            .post-slide {
+              background: #fff;
+              margin: 20px 15px 20px;   
+            }
+            .post-slide .post-img {
+              position: relative;
+              overflow: hidden;
+            }
+            .post-slide .post-img img {
+              width: 100%;
+              height: auto;
+              transform: scale(1, 1);
+              transition: transform 0.2s linear;
+            }
+            .post-slide:hover .post-img img {
+              transform: scale(1.1, 1.1);
+            }
+            .post-slide .over-layer {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              background: linear-gradient(
+                -45deg,
+                rgba(6, 190, 244, 0.75) 0%,
+                rgba(45, 112, 253, 0.6) 100%
+              );
+              transition: all 0.5s linear;
+            }
+            .post-slide:hover .over-layer {
+              opacity: 1;
+              text-decoration: none;
+            }
+            .post-slide .over-layer i {
+              position: relative;
+              top: 45%;
+              text-align: center;
+              display: block;
+              color: #fff;
+              font-size: 25px;
+            }
+            .post-slide .post-content {
+              background: #fff;
+              padding: 2px 20px 40px;
+              border-radius: 15px;
+            }
+            .post-slide .post-title a {
+              font-size: 15px;
+              font-weight: bold;
+              color: #333;
+              display: inline-block;
+              text-transform: uppercase;
+              transition: all 0.3s ease 0s;
+            }
+            .post-slide .post-title a:hover {
+              text-decoration: none;
+              color: #3498db;
+            }
+            .post-slide .post-description {
+              line-height: 24px;
+              color: #808080;
+              margin-bottom: 25px;
+            }
+            .post-slide .post-date {
+              color: #a9a9a9;
+              font-size: 14px;
+            }
+            .post-slide .post-date i {
+              font-size: 20px;
+              margin-right: 8px;
+              color: #cfdace;
+            }
+            .post-slide .read-more { 
+                float: right;
+                padding: 4px 10px;
+                font-size: 12px;
+                color: white;
+                background: #3f51b5;
+            }
+            .post-slide .read-more:hover {
+              background: #3498db;
+              text-decoration: none;
+              color: #fff;
+            }
+            .owl-controls .owl-buttons {
+              text-align: center;
+              margin-top: 20px;
+            }
+            .owl-controls .owl-buttons .owl-prev {
+              background: #ffffff85;
+              position: absolute;
+              top: -13%;
+              left: 15px;
+              padding: 0 18px 0 15px;
+              box-shadow: 3px 14px 25px -10px #92b4d0;
+              transition: background 0.5s ease 0s;
+            }
+            .owl-controls .owl-buttons .owl-next {
+              background: #ffffff85;
+              position: absolute;
+              top: -13%;
+              right: 15px;
+              padding: 0 15px 0 18px; 
+              box-shadow: -3px 14px 25px -10px #92b4d0;
+              transition: background 0.5s ease 0s;
+            }
+            .owl-controls .owl-buttons .owl-prev:after,
+            .owl-controls .owl-buttons .owl-next:after {
+              content: "\f104";
+              font-family: FontAwesome;
+              color: #333;
+              font-size: 30px;
+            }
+            .owl-controls .owl-buttons .owl-next:after {
+              content: "\f105";
+            }
+            @media only screen and (max-width: 1280px) {
+              .post-slide .post-content {
+                padding: 0px 15px 25px 15px;
+              }
+            }
+            #button {
+              display: inline-block;
+              background-color: #667eff;
+              width: 50px;
+              height: 50px;
+              text-align: center;
+              border-radius: 4px;
+              position: fixed;
+              bottom: 30px;
+              right: 30px;
+              transition: background-color .3s, 
+                opacity .5s, visibility .5s;
+              opacity: 0;
+              visibility: hidden;
+              z-index: 1000;
+            }
+            #button::after {
+              content: "\f077";
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              font-size: 1em;
+              line-height: 50px;
+              color: #fff;
+            }
+            #button:hover {
+              cursor: pointer;
+              background-color: #333;
+            }
+            #button:active {
+              background-color: #555;
+            }
+            #button.show {
+              opacity: 1;
+              visibility: visible;
+            }
+
+        </style>
+    </head>  
+    <body> 
+        <a id="button" class="btn-gfort-top"></a> 
+        <div id="main-wrapper"> 
+            <header class="header-section fixed-header"> 
+                <div class="header-section-container"> 
+                    <div class="header-menu"> 
+                        <div class="header-menu-container header-menu-stuck tiny-header"">
+ 
+                            <nav class="navbar"> 
+                                <div class="container"> 
+                                    <div class="row"> 
+                                        <div class="col-md-12"> 
+                                            <div class="navbar-header">
+                                                <a href="#top-page" class="navbar-brand" title="PLUME" style="display: flex;">
+                                                    <img src="assets/images/iconmain.png" alt="Notification Logo" />
+                                                    <span class="nav-title">Notification Services</span>
+                                                </a>
+                                            </div>   
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                                <span class="menu-wd">Menu</span>
+                                                <span class="lines-wrapper"><i class="lines"></i></span>
+                                            </button>  
+                                            <div class="navbar-collapse collapse">
+                                                <ul class="nav navbar-nav">  
+                                                    <li>
+                                                        <a href="#section-0" data-scroll>Home</a>
+                                                    </li> 
+
+                                                    <li>
+                                                        <a href="#section-1" data-scroll>Areas of Practice</a>
+                                                    </li> 
+
+                                                    <li>
+                                                        <a href="#section-2" data-scroll>About Us</a>
+                                                    </li> 
+                                                    <li  >
+                                                        <a href="#section-3" data-scroll>Blog</a>
+                                                    </li>
+
+                                                    <li class="btn-header-menu">
+                                                        <a href="#section-4" data-scroll>Contact Us</a>
+                                                    </li> 
+                                                </ul>
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </nav>    
+                        </div> 
+                    </div>  
+                </div> 
+            </header>  
+            <div class="page-body" style="margin-top: 5em;"> 
+                <div class="main-content"> 
+                    <div class="main-content-container"> 
+                        <div id="section-0" class="rev_slider_wrapper fullwidthbanner-container"> 
+                            <div class="swiper"> 
+                              <div class="swiper-wrapper"> 
+                                <div class="swiper-slide"> 
+                                    <div style="position: absolute; top: 100px;  width: 1120.98px; height: 568.073px;">
+                                      <div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 544.443px; height: 172.961px; transform: translate(135.722px, 0px);">
+                                        <div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 588.844px; height: 187.067px; transform: scale(0.924597, 0.924597); transform-origin: 0px 0px;">
+                                          <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine" lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 8.53333px);">
+                                            <p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto; font-size: 85.3333px; color: rgb(50, 50, 50); line-height: 85px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
+                                              <span  class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">Solving your</span>
+                                            </p>
+                                            <p class="cgHgbA nxe3IQ Xp24Nw" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto; font-size: 85.3333px; color: rgb(50, 50, 50); line-height: 85px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
+                                              <span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;text-wrap: nowrap;">problems head-on</span>
+                                            </p>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <p  data-aos="fade-left" style="font-size: 25.3334px;font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">DCWP-Compliant Process Service, Skip-Tracing and<br/>Court Filings</p> 
+                                          </div>
+                                        </div>
+                                           
+                                      </div>
+                                    </div>
+                                    <img src="assets/images/img1.jpg" style="height: 100%;width:100%;"/>
+                                    
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/img2.jpg" style="height: 100%;width:100%;"/>
+                                </div>
+                              </div> 
+                              <div class="swiper-pagination"></div> 
+                              <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div> 
+                        <section class="pb-1" id="section-1" data-scroll-ready="true" style="background: rgb(50, 50, 50);">
+                            <div class="container" style="padding-top:3em;">
+                                <div class="row" >
+                                    <div data-aos="fade-left" data-aos-duration="5000" data-aos-anchor-placement="bottom-center" class="col-xs-12 col-lg-12 sec-title color-white">
+                                       Areas of Practice
+                                    </div> 
+                                    <div class='col-xs-12 sec-main'>
+                                        <div class="col-lg-6 " data-aos="zoom-out-right"  data-aos-easing="ease-out-cubic"data-aos-duration="2000">
+                                            <div class="sec-services" style="background: #000d54;color:white;">
+                                                <div class="sec-header ">Motor Vehicle Accidents</div>
+                                                <div class="sec-body">Summons and Complaints, Subpoenas, Index Numbers, Filing of RJI/Note of Issue, DMV searches</div>
+                                            </div>
+                                        </div> 
+                                        <div class="col-lg-6 " data-aos="zoom-out-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000">
+                                            <div class="sec-services" style="background: rgb(227, 223, 214);color:black!important; ">
+                                                <div class="sec-header ">Matrimonial & Family</div>
+                                                <div class="sec-body">Personal service of summons and complaints with automatic orders, support orders and summons in family court matters, restraining orders</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-xs-12 sec-main' style="margin-top:1em;">
+                                        <div class="col-lg-6 " data-aos="zoom-out-right" data-aos-easing="ease-out-cubic"data-aos-duration="2000">
+                                            <div class="sec-services" style="background: white;color:black!important; ">
+                                                <div class="sec-header ">Landlord / Tenant</div>
+                                                <div class="sec-body">Predicate Notices, Nonpayment and Holdover Petitions</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 " data-aos="zoom-out-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000">
+                                            <div class="sec-img">
+                                                <img src="assets/images/img5.jpg" style="width:100%;height:100%;"/>
+                                            </div>
+                                          
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </section> 
+                        <section class="pb-1"  id="section-2" data-scroll-ready="true">
+                            <div class="container" style="padding-top:3em;">
+                                <div class="row" >
+                                    <div class="col-xs-12 col-lg-8  ">
+                                       <div class="sec-title ">
+                                        <div class="typewriter">
+                                            <div class="text_hide"></div> 
+                                                <div class="text">Compliance. Experience. Diligence. </div> 
+                                            <div class="text_cursor"></div>
+                                        </div>
+                                        </div>
+                                       <div class="pe-2" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">We are more than a Process Service company, we are an Attorney Service business providing Licensed Process Service, Skip-tracing, Court Filing, and Investigative services. Our services fully adhere to the rules and regulations of the Department of Consumer and Worker Protection and all Civil Practice, Real Property, and Family Laws pertaining to the service of process. Our servers utilities GPS-tracking and time-stamping applications on the job and provide bulletproof affidavits to ease your mind in your case.
+                                        <div><u>Get to know</u> the owner.</div>
+                                       </div>
+                                        
+                                    </div> 
+                                    <div class='col-xs-12 col-lg-4 mt-3'  data-aos="flip-right"  data-aos-duration="2000">
+                                        <img src="assets/images/img7.jpg" style="width:100%;height:100%;"/>
+                                    </div> 
+                                </div>
+                            </div>
+                        </section> 
+                        <section class="pb-3"  id="section-3" data-scroll-ready="true" style="background: #000d54;">
+                            <div class="" style="padding-top:3em;">
+                                <div class="row" >
+                                    <div class="col-xs-12 col-lg-12 color-white">
+                                       <div class="sec-title" style="padding-left: 0;padding-bottom: 0em;">Blog</div> 
+                                        <div class="col-md-12">
+                                          <div id="news-slider" class="owl-carousel">
+                                            <div class="post-slide">
+                                              <div class="post-img">
+                                                <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
+                                                <a   class="over-layer"><i class="fa fa-link"></i></a>
+                                              </div>
+                                              <div class="post-content">
+                                                <h3 class="post-title">
+                                                  <a  >Lorem ipsum dolor sit amet.</a>
+                                                </h3>
+                                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum......</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                                                <a  class="read-more">read more</a>
+                                              </div>
+                                            </div>
+
+                                            <div class="post-slide">
+                                              <div class="post-img">
+                                                <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" alt="">
+                                                <a   class="over-layer"><i class="fa fa-link"></i></a>
+                                              </div>
+                                              <div class="post-content">
+                                                <h3 class="post-title">
+                                                  <a  >Lorem ipsum dolor sit amet.</a>
+                                                </h3>
+                                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum......</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                                                <a  class="read-more">read more</a>
+                                              </div>
+                                            </div>
+
+                                            <div class="post-slide">
+                                              <div class="post-img">
+                                                <img src="https://images.unsplash.com/photo-1564979268369-42032c5ca998?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=500" alt="">
+                                                <a   class="over-layer"><i class="fa fa-link"></i></a>
+                                              </div>
+                                              <div class="post-content">
+                                                <h3 class="post-title">
+                                                  <a  >Lorem ipsum dolor sit amet.</a>
+                                                </h3>
+                                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum......</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                                                <a   class="read-more">read more</a>
+                                              </div>
+                                            </div>
+
+                                            <div class="post-slide">
+                                              <div class="post-img">
+                                                <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
+                                                <a   class="over-layer"><i class="fa fa-link"></i></a>
+                                              </div>
+                                              <div class="post-content">
+                                                <h3 class="post-title">
+                                                  <a  >Lorem ipsum dolor sit amet.</a>
+                                                </h3>
+                                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum......</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                                                <a   class="read-more">read more</a>
+                                              </div>
+                                            </div>
+
+                                            <div class="post-slide">
+                                              <div class="post-img">
+                                                <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" alt="">
+                                                <a  class="over-layer"><i class="fa fa-link"></i></a>
+                                              </div>
+                                              <div class="post-content">
+                                                <h3 class="post-title">
+                                                  <a >Lorem ipsum dolor sit amet.</a>
+                                                </h3>
+                                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum......</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                                                <a  class="read-more">read more</a>
+                                              </div>
+                                            </div>
+
+                                            <div class="post-slide">
+                                              <div class="post-img">
+                                                <img src="https://images.unsplash.com/photo-1484656551321-a1161420a2a0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=306&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=506" alt="">
+                                                <a  class="over-layer"><i class="fa fa-link"></i></a>
+                                              </div>
+                                              <div class="post-content">
+                                                <h3 class="post-title">
+                                                  <a >Lorem ipsum dolor sit amet.</a>
+                                                </h3>
+                                                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum......</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                                                <a   class="read-more">read more</a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>  
+                                    </div> 
+                                </div>
+                            </div>
+                        </section>  
+                        <section class="pb-3"  id="section-4" data-scroll-ready="true" style="background: white;">
+                            <div class="container" style="padding-top:3em;">
+                                <div class="row" >
+                                    <div class="col-xs-12 col-lg-12 ">
+                                       <div class="sec-title" style="text-align: left;padding-left: 0;padding-bottom: 1em;">Contact Us</div>
+                                       <div >To help us best serve your inquiry, we recommend that you first describe the issue you’re having before telling us what you want to achieve. Our general response time is one business day.</div>
+                                       <div class="pt-1">
+                                            <a class="color-gray" href="mailto:admin@notificationservices.net"><i class="fa fa-envelope" aria-hidden="true"></i> admin@notificationservices.net</a>
+                                       </div>
+                                       <div class="pt-1">
+                                            <i class="fa fa-phone" aria-hidden="true"></i> (718) 928-3919
+                                       </div>
+                                       <div class="pt-1">
+                                            <i class="fa fa-archive" aria-hidden="true"></i> P.O. Box 4222
+                                       </div>
+                                       <div class="pt-1">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                                            Long Island:<br/>55 Gerard Street, #4222<br/>Huntington, NY 11743
+                                       </div>
+                                       <div class="pt-1">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                                            Queens:<br/>31-19 Newtown Ave., Suite 500<br/>Astoria, NY 11102
+                                       </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </section>  
+                    </div> 
+                </div>  
+            </div>  
+            <footer class="footer-section"> 
+                <div class="footer-top-section"> 
+                    <div class="footer-top-section-container"> 
+                        <div class="container"> 
+                            <div class="row"> 
+                                <div class="col-md-4"> 
+                                    <div class="widget-block widget-block-text"> 
+                                        <div class="widget-block-container"> 
+                                            <div class="widget-block-title"> 
+                                            </div> 
+                                            <div class="widget-block-body"> 
+                                                <img src="assets/images/favicon.png" style="height: 100px;background: white;border-radius: 10px;"> 
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                <div class="col-md-2"> 
+                                    <div class="widget-block widget-block-link"> 
+                                        <div class="widget-block-container"> 
+                                            <div class="widget-block-title">
+                                                <h6>Company</h6>
+                                            </div> 
+ 
+                                            <div class="widget-block-body"> 
+                                                <ul class="links-block">
+                                                    <li><a href="#" title="FAQs">FAQs</a></li>
+                                                    <li><a href="#" title="Terms of use">Terms of use</a></li>
+                                                    <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+                                                </ul> 
+                                            </div>  
+                                        </div> 
+                                    </div>  
+                                </div>  
+                                <div class="col-md-2"> 
+                                    <div class="widget-block widget-block-link"> 
+                                        <div class="widget-block-container"> 
+                                            <div class="widget-block-title">
+                                                <h6>Account</h6>
+                                            </div>  
+                                            <div class="widget-block-body"> 
+                                                <ul class="links-block">
+                                                    <li><a href="#" title="Sign in">Sign in</a></li>
+                                                    <li><a href="#" title="Sign up">Sign up</a></li>
+                                                    <li><a href="#" title="Reset Password">Reset Password</a></li>
+                                                </ul>  
+                                            </div>  
+                                        </div> 
+                                    </div>  
+                                </div>  
+                                <div class="col-md-2"> 
+                                    <div class="widget-block widget-block-link"> 
+                                        <div class="widget-block-container"> 
+                                            <div class="widget-block-title">
+                                                <h6>Learn More</h6>
+                                            </div>  
+                                            <div class="widget-block-body"> 
+                                                <ul class="links-block">
+                                                    <li><a href="#" title="Pricing">Pricing</a></li>
+                                                    <li><a href="#" title="Portfolio">Portfolio</a></li>
+                                                    <li><a href="#" title="About us">About us</a></li>
+                                                </ul>  
+                                            </div>  
+                                        </div> 
+                                    </div>  
+                                </div>  
+                                <div class="col-md-2"> 
+                                    <div class="widget-block widget-block-link"> 
+                                        <div class="widget-block-container"> 
+                                            <div class="widget-block-title">
+                                                <h6>Follow us</h6>
+                                            </div>  
+                                            <div class="widget-block-body"> 
+                                                <ul class="links-block">
+                                                    <li><a href="#" title="Facebook">Facebook</a></li>
+                                                    <li><a href="#" title="Twitter">Twitter</a></li>
+                                                    <li><a href="#" title="Google Plus">Google Plus</a></li>
+                                                </ul>  
+                                            </div>  
+                                        </div> 
+                                    </div>  
+                                </div>  
+                            </div> 
+                        </div> 
+                    </div> 
+                </div>  
+                <div class="footer-copyright-section"> 
+                    <div class="footer-copyright-section-container"> 
+                        <div class="container"> 
+                            <div class="row">  
+                                <div class="copyright-widget widget-left-side"> 
+                                    <div class="copyright-widget-container"> 
+                                        <div class="info-block"> 
+                                            <div class="info-block-container"> 
+                                                <p>© Notification Services LLC, all rights reserved.</p> 
+                                            </div> 
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="copyright-widget widget-right-side"> 
+
+                                    <div class="copyright-widget-container">  
+                                        <div class="social-icons-block icons-transparent icons-sm icons-style-1">
+                                            <ul> 
+                                                <li>
+                                                    <a href="#" title="Facebook">
+                                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#" title="Google Plus">
+                                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#" title="Twitter">
+                                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="youtube">
+                                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Behance">
+                                                        <i class="fa fa-behance" aria-hidden="true"></i>
+                                                        <i class="fa fa-behance" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Pinterest">
+                                                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Dribbble">
+                                                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                                    </a>
+                                                </li> 
+                                            </ul>
+                                        </div>  
+                                    </div> 
+                                </div>  
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </footer> 
+
+
+        </div> 
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <!-- <script type="text/javascript" src="assets/js/plugins.js"></script>  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script> 
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                 AOS.init();
+                const swiper = new Swiper('.swiper', { 
+                  direction: 'horizontal',
+                  loop: true, 
+                  pagination: {
+                    el: '.swiper-pagination',
+                  }, 
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    disabledClass: 'disabled_swiper_button'
+                  }, 
+                  scrollbar: {
+                    el: '.swiper-scrollbar',
+                  },
+                  autoplay: {
+                    delay: 8000,
+                  },
+                });
+                $('[data-scroll]').on('click', function (e) {
+                    e.preventDefault();  
+
+                    const targetId = $(this).attr('href'); 
+                    const targetOffset = $(targetId).offset().top; 
+ 
+                    $('html, body').animate({
+                        scrollTop: targetOffset
+                    }, 800); 
+                });
+                  $("#news-slider").owlCarousel({
+                    items: 3,
+                    itemsDesktop: [1199, 3],
+                    itemsDesktopSmall: [980, 2],
+                    itemsMobile: [600, 1],
+                    navigation: true,
+                    navigationText: ["", ""],
+                    pagination: true,
+                    autoPlay: false
+                  }); 
+            });
+            var btn = $('#button');
+
+            $(window).scroll(function() {
+              if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+              } else {
+                btn.removeClass('show');
+              }
+            });
+
+            btn.on('click', function(e) {
+              e.preventDefault();
+              $('html, body').animate({scrollTop:0}, '300');
+            });
+        </script> 
+
+</body>
+</html>
