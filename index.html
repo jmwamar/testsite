@@ -35,188 +35,9 @@
         <link rel="stylesheet" href="assets/css/responsive.css"> 
         <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"> 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-        <!-- <script src="assets/js/modernizr-custom.js"></script> -->
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-       
-
-        <style type="text/css">
-            .swiper {
-          width: 100%;
-          height: 700px;
-        }
-        .disabled_swiper_button {
-            opacity: 0;
-            cursor: auto;
-            pointer-events: none;
-        }
-            #news-slider {
-              margin-top: 80px;
-            }
-            .post-slide {
-              background: #fff;
-              margin: 20px 15px 20px;   
-            }
-            .post-slide .post-img {
-              position: relative;
-              overflow: hidden;
-            }
-            .post-slide .post-img img {
-              width: 100%;
-              height: auto;
-              transform: scale(1, 1);
-              transition: transform 0.2s linear;
-            }
-            .post-slide:hover .post-img img {
-              transform: scale(1.1, 1.1);
-            }
-            .post-slide .over-layer {
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              opacity: 0;
-              background: linear-gradient(
-                -45deg,
-                rgba(6, 190, 244, 0.75) 0%,
-                rgba(45, 112, 253, 0.6) 100%
-              );
-              transition: all 0.5s linear;
-            }
-            .post-slide:hover .over-layer {
-              opacity: 1;
-              text-decoration: none;
-            }
-            .post-slide .over-layer i {
-              position: relative;
-              top: 45%;
-              text-align: center;
-              display: block;
-              color: #fff;
-              font-size: 25px;
-            }
-            .post-slide .post-content {
-              background: #fff;
-              padding: 2px 20px 40px;
-              border-radius: 15px;
-            }
-            .post-slide .post-title a {
-              font-size: 15px;
-              font-weight: bold;
-              color: #333;
-              display: inline-block;
-              text-transform: uppercase;
-              transition: all 0.3s ease 0s;
-            }
-            .post-slide .post-title a:hover {
-              text-decoration: none;
-              color: #3498db;
-            }
-            .post-slide .post-description {
-              line-height: 24px;
-              color: #808080;
-              margin-bottom: 25px;
-            }
-            .post-slide .post-date {
-              color: #a9a9a9;
-              font-size: 14px;
-            }
-            .post-slide .post-date i {
-              font-size: 20px;
-              margin-right: 8px;
-              color: #cfdace;
-            }
-            .post-slide .read-more { 
-                float: right;
-                padding: 4px 10px;
-                font-size: 12px;
-                color: white;
-                background: #3f51b5;
-            }
-            .post-slide .read-more:hover {
-              background: #3498db;
-              text-decoration: none;
-              color: #fff;
-            }
-            .owl-controls .owl-buttons {
-              text-align: center;
-              margin-top: 20px;
-            }
-            .owl-controls .owl-buttons .owl-prev {
-              background: #ffffff85;
-              position: absolute;
-              top: -13%;
-              left: 15px;
-              padding: 0 18px 0 15px;
-              box-shadow: 3px 14px 25px -10px #92b4d0;
-              transition: background 0.5s ease 0s;
-            }
-            .owl-controls .owl-buttons .owl-next {
-              background: #ffffff85;
-              position: absolute;
-              top: -13%;
-              right: 15px;
-              padding: 0 15px 0 18px; 
-              box-shadow: -3px 14px 25px -10px #92b4d0;
-              transition: background 0.5s ease 0s;
-            }
-            .owl-controls .owl-buttons .owl-prev:after,
-            .owl-controls .owl-buttons .owl-next:after {
-              content: "\f104";
-              font-family: FontAwesome;
-              color: #333;
-              font-size: 30px;
-            }
-            .owl-controls .owl-buttons .owl-next:after {
-              content: "\f105";
-            }
-            @media only screen and (max-width: 1280px) {
-              .post-slide .post-content {
-                padding: 0px 15px 25px 15px;
-              }
-            }
-            #button {
-              display: inline-block;
-              background-color: #667eff;
-              width: 50px;
-              height: 50px;
-              text-align: center;
-              border-radius: 4px;
-              position: fixed;
-              bottom: 30px;
-              right: 30px;
-              transition: background-color .3s, 
-                opacity .5s, visibility .5s;
-              opacity: 0;
-              visibility: hidden;
-              z-index: 1000;
-            }
-            #button::after {
-              content: "\f077";
-              font-family: FontAwesome;
-              font-weight: normal;
-              font-style: normal;
-              font-size: 1em;
-              line-height: 50px;
-              color: #fff;
-            }
-            #button:hover {
-              cursor: pointer;
-              background-color: #333;
-            }
-            #button:active {
-              background-color: #555;
-            }
-            #button.show {
-              opacity: 1;
-              visibility: visible;
-            }
-
-        </style>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     </head>  
     <body> 
         <a id="button" class="btn-gfort-top"></a> 
@@ -224,8 +45,7 @@
             <header class="header-section fixed-header"> 
                 <div class="header-section-container"> 
                     <div class="header-menu"> 
-                        <div class="header-menu-container header-menu-stuck tiny-header"">
- 
+                        <div class="header-menu-container header-menu-stuck tiny-header"> 
                             <nav class="navbar"> 
                                 <div class="container"> 
                                     <div class="row"> 
@@ -277,40 +97,62 @@
                             <div class="swiper"> 
                               <div class="swiper-wrapper"> 
                                 <div class="swiper-slide"> 
-                                    <div style="position: absolute; top: 100px;  width: 1120.98px; height: 568.073px;">
-                                      <div class="DF_utQ _682gpw _0xkaeQ" style="touch-action: pan-x pan-y pinch-zoom; width: 544.443px; height: 172.961px; transform: translate(135.722px, 0px);">
+                                    <div class="banner-container" style="">
+                                      <div class="transform-mb" style="touch-action: pan-x pan-y pinch-zoom; width: 544.443px; height: 172.961px;">
                                         <div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 588.844px; height: 187.067px; transform: scale(0.924597, 0.924597); transform-origin: 0px 0px;">
                                           <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine" lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 8.53333px);">
-                                            <p class="cgHgbA nxe3IQ Xp24Nw PanoWQ" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto; font-size: 85.3333px; color: rgb(50, 50, 50); line-height: 85px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
-                                              <span  class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">Solving your</span>
+                                            <p class="banner-txt1" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto;  color: rgb(50, 50, 50); letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
+                                              <span  class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">Solving your<br/>problems head-on</span>
                                             </p>
-                                            <p class="cgHgbA nxe3IQ Xp24Nw" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto; font-size: 85.3333px; color: rgb(50, 50, 50); line-height: 85px; letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
-                                              <span class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;text-wrap: nowrap;">problems head-on</span>
-                                            </p>
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            <p  data-aos="fade-left" style="font-size: 25.3334px;font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">DCWP-Compliant Process Service, Skip-Tracing and<br/>Court Filings</p> 
+                                            <p class="banner-txt2"  data-aos="fade-left" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">DCWP-Compliant Process Service, Skip-Tracing and<br/>Court Filings</p> 
                                           </div>
                                         </div>
                                            
                                       </div>
                                     </div>
-                                    <img src="assets/images/img1.jpg" style="height: 100%;width:100%;"/>
-                                    
+                                    <img  class="banner-img" src="assets/images/img1.jpg"/> 
                                 </div>
-                                <div class="swiper-slide">
-                                    <img src="assets/images/img2.jpg" style="height: 100%;width:100%;"/>
+                                <div class="swiper-slide"> 
+                                    <div class="banner-container" style="">
+                                      <div class="transform-mb" style="touch-action: pan-x pan-y pinch-zoom; width: 544.443px; height: 172.961px;">
+                                        <div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 588.844px; height: 187.067px; transform: scale(0.924597, 0.924597); transform-origin: 0px 0px;">
+                                          <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine" lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 8.53333px);">
+                                            <p class="banner-txt1" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto;  color: rgb(50, 50, 50); letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
+                                              <span  class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">Nothing is<br/>Challenging</span>
+                                            </p>
+                                            <p class="banner-txt2"  style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">When you work with<br/>Professionals!</p> 
+                                          </div>
+                                        </div>
+                                           
+                                      </div>
+                                    </div>
+                                    <img  class="banner-img" src="assets/images/img8.jpg"/> 
+                                </div>
+                                <div class="swiper-slide"> 
+                                    <div class="banner-container" style="">
+                                      <div class="transform-mb" style="touch-action: pan-x pan-y pinch-zoom; width: 544.443px; height: 172.961px;">
+                                        <div class="aF9o6Q _0yZ6Qg" style="writing-mode: horizontal-tb; width: 588.844px; height: 187.067px; transform: scale(0.924597, 0.924597); transform-origin: 0px 0px;">
+                                          <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine" lang="en" class="AdBbhQ hGbcYA rLWGlw _7rUwsA" style="transform: translate(0px, 8.53333px);">
+                                            <p class="banner-txt1" style="font-family: &quot;YAFdJtfMD6Y 0&quot;, auto;  color: rgb(50, 50, 50); letter-spacing: 0em; --pY_8zA: 0; text-transform: none; --oJepFA: 0; --uYCVzQ: none; list-style-type: none;">
+                                              <span  class="OYPEnA" style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">Trust the process<br/>server that delivers</span>
+                                            </p>
+                                            <p class="banner-txt2"  style="font-weight: 400; font-style: normal; color: rgb(50, 50, 50); font-kerning: none; text-decoration: none;">Get your Paperwork <br/>served and filed Quickly and<br/> Affordably!</p> 
+                                          </div>
+                                        </div>
+                                           
+                                      </div>
+                                    </div>
+                                    <img  class="banner-img" src="assets/images/img11.jpg"/> 
                                 </div>
                               </div> 
                               <div class="swiper-pagination"></div> 
                               <div class="swiper-scrollbar"></div>
                             </div>
                         </div> 
-                        <section class="pb-1" id="section-1" data-scroll-ready="true" style="background: rgb(50, 50, 50);">
+                        <section class="pb-4" id="section-1" data-scroll-ready="true" style="background: rgb(50, 50, 50);">
                             <div class="container" style="padding-top:3em;">
                                 <div class="row" >
-                                    <div data-aos="fade-left" data-aos-duration="5000" data-aos-anchor-placement="bottom-center" class="col-xs-12 col-lg-12 sec-title color-white">
+                                    <div data-aos="fade-left" data-aos-duration="2000"  class="col-xs-12 col-lg-12 sec-title color-white">
                                        Areas of Practice
                                     </div> 
                                     <div class='col-xs-12 sec-main'>
@@ -344,7 +186,7 @@
                                 </div>
                             </div>
                         </section> 
-                        <section class="pb-1"  id="section-2" data-scroll-ready="true">
+                        <section class="pb-4"  id="section-2" data-scroll-ready="true">
                             <div class="container" style="padding-top:3em;">
                                 <div class="row" >
                                     <div class="col-xs-12 col-lg-8  ">
@@ -355,8 +197,12 @@
                                             <div class="text_cursor"></div>
                                         </div>
                                         </div>
-                                       <div class="pe-2" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">We are more than a Process Service company, we are an Attorney Service business providing Licensed Process Service, Skip-tracing, Court Filing, and Investigative services. Our services fully adhere to the rules and regulations of the Department of Consumer and Worker Protection and all Civil Practice, Real Property, and Family Laws pertaining to the service of process. Our servers utilities GPS-tracking and time-stamping applications on the job and provide bulletproof affidavits to ease your mind in your case.
+                                       <div class="pe-2 fs-mb" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">We are more than a Process Service company, we are an Attorney Service business providing Licensed Process Service, Skip-tracing, Court Filing, and Investigative services. Our services fully adhere to the rules and regulations of the Department of Consumer and Worker Protection and all Civil Practice, Real Property, and Family Laws pertaining to the service of process. Our servers utilities GPS-tracking and time-stamping applications on the job and provide bulletproof affidavits to ease your mind in your case.
                                         <div><u>Get to know</u> the owner.</div>
+                                       </div>
+                                       <div class="pe-2 mt-2 fs-mb" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">Notification Services has offices in Long Island and Queens, New York, and is well-suited to provide licensed process service in the Five Boroughs, Long Island, and internationally. We provide Skip Tracing, and filing of papers in all New York Courts.<br/>Whether you’re a sole practitioner or an international firm, Notification Services can provide you with the results you need to locate and identify your adversaries and serve process. 
+                                       </div>
+                                       <div class="pe-2 mt-2 fs-mb" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">Notification Services began as a small, accountable and diligent service company  in 2011. Consistent professionalism  and growth in the field has allowed us to become a trusted source for attorneys and process serving professionals. In 2022, founder Andrew Mega was elected to the Board of Directors of the New York State Professional Process Server’s Association where he serves on a Legislative Committee focused on advocating for Professional Process Servers in New York State.
                                        </div>
                                         
                                     </div> 
@@ -366,7 +212,7 @@
                                 </div>
                             </div>
                         </section> 
-                        <section class="pb-3"  id="section-3" data-scroll-ready="true" style="background: #000d54;">
+                        <section class="pb-4"  id="section-3" data-scroll-ready="true" style="background: #000d54;">
                             <div class="" style="padding-top:3em;">
                                 <div class="row" >
                                     <div class="col-xs-12 col-lg-12 color-white">
@@ -468,14 +314,138 @@
                                 </div>
                             </div>
                         </section>  
-                        <section class="pb-3"  id="section-4" data-scroll-ready="true" style="background: white;">
+                        <section class="pricing-plans text-center pb-4" id="section-5">
+                            <div class="container pt-3">
+                              <div class="row justify-content-md-center">
+                                <div class="col-sm-12 col-md-8 col-md-offset-2">
+                                  <div class="sec-title"  style="padding-bottom: 1em;">
+                                    Pricing Plans
+                                  </div>
+                                  <p class="lead mb-30">
+                                    Choose the best pricing plan that suits you!
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4 animated "  data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                  <div class="card pricing-box rounded">
+                                    <div class="card-block">
+                                      <h4 class="card-title">
+                                        Standard
+                                      </h4>
+                                      <h6 class="card-text">
+                                        <sup class="currency">
+                                          $
+                                        </sup>
+                                        <span class="amount">
+                                          9
+                                        </span>
+                                        <span class="month">
+                                          / mo
+                                        </span>
+                                      </h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item text-center d-inline-block">
+                                        Lorem Ipsum dolor
+                                      </li>
+                                      <li class="list-group-item text-center d-inline-block">
+                                        Lorem Ipsum dolor
+                                      </li>
+                                      <li class="list-group-item text-center d-inline-block">
+                                        Lorem Ipsum dolor
+                                      </li> 
+                                    </ul>
+                                    <div class="card-block">
+                                      <a href="#" class="btn btn-outline-start" title="Get Started">
+                                        Get Started
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                                  <div class="card pricing-box pricing-premium">
+                                    <div class="card-block">
+                                      <h4 class="card-title">
+                                        Posting
+                                      </h4>
+                                      <h6 class="card-text">
+                                        <sup class="currency">
+                                          $
+                                        </sup>
+                                        <span class="amount">
+                                          19
+                                        </span>
+                                        <span class="month">
+                                          / mo
+                                        </span>
+                                      </h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item text-center d-inline-block">
+                                         Lorem Ipsum dolor
+                                      </li>
+                                      <li class="list-group-item text-center d-inline-block">
+                                         Lorem Ipsum dolor
+                                      </li>
+                                      <li class="list-group-item text-center d-inline-block">
+                                         Lorem Ipsum dolor
+                                      </li> 
+                                    </ul>
+                                    <div class="card-block">
+                                      <a href="#" class="btn btn-start" title="Get Started">
+                                        Get Started
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 "  data-aos="fade-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000">
+                                  <div class="card pricing-box">
+                                    <div class="card-block">
+                                      <h4 class="card-title">
+                                        Expedited
+                                      </h4>
+                                      <h6 class="card-text">
+                                        <sup class="currency">
+                                          $
+                                        </sup>
+                                        <span class="amount">
+                                          39
+                                        </span>
+                                        <span class="month">
+                                          / mo
+                                        </span>
+                                      </h6>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item text-center d-inline-block">
+                                         Lorem Ipsum dolor
+                                      </li>
+                                      <li class="list-group-item text-center d-inline-block">
+                                         Lorem Ipsum dolor
+                                      </li>
+                                      <li class="list-group-item text-center d-inline-block">
+                                         Lorem Ipsum dolor
+                                      </li> 
+                                    </ul>
+                                    <div class="card-block">
+                                      <a href="#" class="btn btn-outline-start" title="Get Started">
+                                        Get Started
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        <section class="pb-3 color-white"  id="section-4" data-scroll-ready="true" style="    background: rgb(50, 50, 50);">
                             <div class="container" style="padding-top:3em;">
                                 <div class="row" >
                                     <div class="col-xs-12 col-lg-12 ">
                                        <div class="sec-title" style="text-align: left;padding-left: 0;padding-bottom: 1em;">Contact Us</div>
                                        <div >To help us best serve your inquiry, we recommend that you first describe the issue you’re having before telling us what you want to achieve. Our general response time is one business day.</div>
                                        <div class="pt-1">
-                                            <a class="color-gray" href="mailto:admin@notificationservices.net"><i class="fa fa-envelope" aria-hidden="true"></i> admin@notificationservices.net</a>
+                                            <a class="color-white" href="mailto:admin@notificationservices.net"><i class="fa fa-envelope" aria-hidden="true"></i> admin@notificationservices.net</a>
                                        </div>
                                        <div class="pt-1">
                                             <i class="fa fa-phone" aria-hidden="true"></i> (718) 928-3919
